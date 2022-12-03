@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       GOversion:
-        description: 'GoVersion'
+        description: 'Go Version'
         required: true
         default: '1.15.15'
         type: choice
@@ -19,5 +19,5 @@ jobs:
     steps:
       - run: |
           echo "GoVersion: $GOVERSION"
-          env: GOVERSION ${{ inputs.GOversion }}
+          env: GOVERSION: ${{ inputs.GOversion }}
 
