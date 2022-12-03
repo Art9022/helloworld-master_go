@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Go Version: INPUTS.GO"
+          echo "Go Version: $VERSIA"
+        env:
+          VERSIA: ${{ inputs.GO }}
           
 
