@@ -1,0 +1,23 @@
+#
+name: Go versia
+on:
+  workflow_dispatch:
+    inputs:
+      GOversion:
+        description: 'Go Version'
+        required: true
+        default: 'go1.19.3'
+        type: choice
+        options:
+        - go1.18.8
+        - go1.19.3
+        - go1.18.6
+
+jobs:
+  log-the-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Go version: $GOVERSION"
+          env: GOVERSION ${{ inputs.GOversion }}
+
