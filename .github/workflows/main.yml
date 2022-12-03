@@ -8,9 +8,7 @@ on:
     types:
       - "completed"
 
-  push:
-    branches:
-     - master
+
 
 jobs:
   go_test:
