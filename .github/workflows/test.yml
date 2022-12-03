@@ -9,9 +9,9 @@ on:
         default: 'go1.19.3'
         type: choice
         options:
-        - go1.18.8
-        - go1.19.3
-        - go1.18.6
+        - 1.18.8
+        - 1.15.15
+        - 1.18.6
 
 jobs:
   log-the-inputs:
