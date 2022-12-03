@@ -22,8 +22,8 @@ jobs:
         env:
           VERSIA: ${{ inputs.GO }}
       -  run:
-          mkdir -p ./versia
-          touch go_version
-          echo $VERSIA > ./veersia/go_version
+          mkdir  ./versia
+          touch ./versia/go_version
+          echo $VERSIA > ./versia/go_version
           
 
