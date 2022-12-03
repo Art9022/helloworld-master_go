@@ -19,5 +19,5 @@ jobs:
     steps:
       - run: |
           echo "Go version: $GOVERSION"
-          env: GOVERSION ${{ inputs.GOversion }}
+          env: GOVERSION ${{ inputs.GO version }}
 
