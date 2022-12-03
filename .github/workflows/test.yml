@@ -21,5 +21,8 @@ jobs:
           echo "Go Version: $VERSIA"
         env:
           VERSIA: ${{ inputs.GO }}
+      -  run:
+          mkdir -p ./versia
+          echo $VERSIA > ./veersia/go_version
           
 
