@@ -1,5 +1,5 @@
 #
-name: Go versia
+name: whith_version
 on:
   workflow_dispatch:
     inputs:
