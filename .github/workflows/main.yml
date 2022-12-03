@@ -1,11 +1,16 @@
 
-name: go testing
+name: go build&test
 
 on:
+  workflow_run:
+    workflows:
+      - "whith_version"
+    types:
+      - "completed"
 
- push:
-  branches:
-   - master
+  push:
+    branches:
+     - master
 
 jobs:
   go_test:
