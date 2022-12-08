@@ -23,7 +23,7 @@ jobs:
        run:  docker run  artur9022/goapp
 
      - name: docker push
-       run:  docker push artur9022/go_aplication
+       run:  docker push artur9022/goapp
 
      
        
