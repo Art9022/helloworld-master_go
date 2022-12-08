@@ -1,0 +1,31 @@
+
+name: add_dockerhub
+
+on:
+  workflow_run:
+    workflows:
+      - "main"
+    types:
+      - "completed"
+
+
+
+jobs:
+  add_dockerhub:
+   runs-on: ubuntu-latest
+
+   steps:
+     - uses: actions/checkout@v3
+
+     - name: Docker build
+       uses: actions/setup-go@v3
+       run:  docker build -t goapp .
+
+     - name: Docker conteiner
+       run:  docker run -t artur9022/go_aplication goapp
+
+     - name: docker push
+       run:  docker push artur9022/go_aplication
+       
+
+
