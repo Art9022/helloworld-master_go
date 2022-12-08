@@ -16,9 +16,7 @@ jobs:
 
    steps:
      - uses: actions/checkout@v3
-
-     - name: Docker build
-       uses: actions/setup-go@v3
+     - name: build
        run:  docker build -t goapp .
 
      - name: Docker conteiner
