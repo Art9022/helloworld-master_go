@@ -4,7 +4,7 @@ name: add_dockerhub
 on:
   workflow_run:
     workflows:
-      - "main"
+      - "go build&test"
     types:
       - "completed"
 
