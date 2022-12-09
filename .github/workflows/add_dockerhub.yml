@@ -16,14 +16,21 @@ jobs:
 
    steps:
      - uses: actions/checkout@v3
-       
-     - name: Build and push docker image
-       uses: docker/build-push-action@v1
+     - name: build
+       run:  docker build -t artur9022/goapp .
+
+     - name: Docker conteiner
+       run:  docker run  artur9022/goapp
+
+     - name: docker push
+       uses: docker/build-push-action@v2
        with:
          username: ${{ secrets.DOCKER_USERNAME }}
-         password: ${{ secrets.DOCKER_PASSWORD }}
-         repository: artur9022/goapps
+         passeord: ${{ secrets.DOCKER_PASSWORD }}
+         repository: artur9022/goapp
          dockerfile: artur9022/goapp
-         tags: latest
+
+     
+       
 
 
