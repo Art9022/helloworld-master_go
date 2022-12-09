@@ -23,7 +23,7 @@ jobs:
        run:  docker run  artur9022/goapp
 
      - name: docker push
-       uses: docker/build-push-action@v2
+       uses: docker/build-push-action@v1
        with:
          username: ${{ secrets.DOCKER_USERNAME }}
          passeord: ${{ secrets.DOCKER_PASSWORD }}
