@@ -28,8 +28,9 @@ jobs:
        run: go install
 
      - name: open file
-       run:  cd $GOPATH/bin/
-       run:  main
+       run:  |
+             cd $GOPATH/bin/
+             main
       
        
 
