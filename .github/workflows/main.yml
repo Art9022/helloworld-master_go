@@ -30,7 +30,8 @@ jobs:
      - name: open file
        run:  |
              cd $GOPATH/bin/
-             main
+             ls $GOPATH/bin/
+             ./main
       
        
 
