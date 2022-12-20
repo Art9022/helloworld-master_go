@@ -28,7 +28,8 @@ jobs:
        run: go install
 
      - name: open file
-       run:  $HOME/main
+       run:  $GOPATH/bin/main
+      
        
 
 
