@@ -1,7 +1,13 @@
 
 name: go build&test
 
-on: [push]
+
+on:
+  workflow_run:
+    workflows:
+      - "wich_version"
+    types:
+      - "completed"
   
 
 
@@ -27,12 +33,6 @@ jobs:
      - name: install
        run: go install
 
-     - name: open file
-       run:  |
-             cd $GOPATH/bin/
-             ls $GOPATH/bin/
-             ./main
-      
-       
+    
 
 
