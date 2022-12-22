@@ -10,10 +10,10 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        version: [1.19.3. 1.18.9, 1.13]
-    runs-on: ${{ matrix.os}}
+        version: [1.19, 1.18, 1.13]
+        runs-on: ${{ matrix.os}}
 
-    steps:
+        steps:
           - uses: actions/checkout@v3
 
           - name: Set up go
